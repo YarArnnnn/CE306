@@ -19,5 +19,16 @@ if (score <= 49){
 let productPrice = 1000;
 let discountPer = 10;
 let discounted = productPrice / discountPer;
+let tumniem = 50;
+let finalPrice = 0;
 
-if ()
+if (discounted <= 0) {
+    console.log("ราคา : 0")
+}
+if (discounted <= 500) {
+    finalPrice = tumniem + discounted;
+    console.log(finalPrice);
+}
+if (discounted>= 500); {
+    finalPrice = discounted + discounted * 10/100;
+}
