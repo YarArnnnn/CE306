@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.card-cardtBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.card{
+    background-color: lightgray;
+    border-radius: 20px;
+    box-shadow: 0 4 8px;
+    padding: 15px;
+    flex-basis: 300px;
+    flex-grow: 1;
+    max-width: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: hidden;
+     flex-wrap: wrap;
+}
+.imgcard {
+    width: 300px;
+    max-width: auto;
+}
+
+.btn {
+
+}

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <style>
+            div p {
+                background-color: lightblue;
+                padding: 10px;
+                border: 1px;
+                margin-bottom: 5px ; 
+            }
+            #header {
+                background-color: lightgray;
+            }
+            #maincontent {
+                border: 1px solid green;
+            }         
+            p {
+                font-size: 18px;
+                color: blue;
+            }
+            h1 {
+                text-align: center;
+            }
+            .Hightlight {
+                background-color: bisque;
+                font-weight: bold; 
+            }
+            .error {
+                color: red;
+            }
+            a {
+                color: blue;
+                text-decoration: none;
+            }
+            a:hover {
+                color: red;
+                text-decoration: underline;
+                font-weight: bold;
+
+            }
+            a:visited {
+                color: purple;
+
+            }
+            a:active {
+                color: green;
+            }
+            div p:first-child {
+                background-color: lightyellow;
+                padding: 10px;
+                border: 1px dashed blue;
+            }
+            div p:last-child {
+                background-color: lightcyan;
+                padding: 10px;
+                border: 1px dashed orange;
+            }
+            input[type="text"]:focus {
+                border: #4caf50;
+                box-shadow: 0 0 5px rgba(red, green, blue, alpha) ; 
+                outline: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>สวัดดีโลก</h1>
+        <p>นี่คือย่อหน้าแรก</p>
+        <p>นี่คือย่อหน้าถัดมา</p>
+        <div id="header">
+            <h1>นี่คือเว็ปไซต์ของฉัน</h1>
+        </div>
+        <p>ข้อความทั่วไป</p>
+        <div id="main-content" >
+            <p>เนื้อหาหลักของหน้า</p>
+        </div>
+        <p>ข้อความปรกติ</p>
+        <p class="hightlight"> ข้อความนี้จะถูกเน้น </p>
+        <div class="error">เกิดข้อผิดพลาด</div>
+        <span class="Hightlight">และนี่จะถูกเน้นด้วย</span>
+        <div class="container"> 
+            <p>นี่คือย่อหน้าที่อยู่ใน div(ที่ถูกเลือก)</p>
+            <span>
+                <p>นี่คือย่อหน้าที่อยู่ใน span ไม่ถูกเลือก</p>
+            </span>
+        </div>
+        <p>นี่คือย่อหน้าที่ไม่อยู่ใน div (ไม่ถูกเลือก)</p>
+        <section>
+            <p>นี่คือย่อหน้าที่อยู่ใน section (ไม่ถูกเลือก)</p>
+        </section>
+        <h1> psudo-class</h1>
+        <h2>ลิงก์</h2>
+        <p>ลองวางเม้าเเล้วคลิกดู</p>
+        <a href="https://www.google.com" target="_blank">google</a>
+        <a href="https://www.w3school.com" target="_blank">w3school</a>
+        <a href="#">ลิงก์ไม่ไปไหน</a>
+        <h2>ย่อหน้าใน</h2>
+        <div>
+            <p>ย่อหน้านี้คือ first child ของ div (จะมีพื้นหลังสีเหลือง)</p>
+            <p>ย่อหน้านี้เป็นย่อหน้าปรกติ</p>
+            <span>นี่คือ span</span>
+            <p>ย่อหน้านี้คือ last child ของ div (จะมีพื้นหลังสีฟ้า)</p>
+        </div>
+
+        <h2>ช่องหรอกข้อมูล</h2>
+        <label for="username">ชื่อผู้ใช้ : </label>
+        <input type="text" id="username" placeholder="พิมชื่อของคุณ"><br><br>
+        <label for="email ">email : </label>
+        <input type="email" id="email" placeholder="พิมอัเมลของคุณ" >
+    </body>
+</html>
