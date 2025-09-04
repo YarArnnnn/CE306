@@ -15,3 +15,4 @@ const Greeting = (props: GreetingProps) => {
 };
 
 export default Greeting;
+
