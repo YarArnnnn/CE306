@@ -1,35 +1,59 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import UserProfileCard from "./components/UserProfileCard";
+import type { UserData } from "./types";
+
+const users: UserData[] = [
+  {
+    id: 1,
+    name: "Tum",
+    email: "TumFatherOfTitle@gmail.com.",
+    isOnline: true,
+    skills: [
+      { name: "React", level: "Intermediate" },
+      { name: "TypeScript", level: "Beginner" },
+    ],
+  },
+  {
+    id: 2,
+    name: "T",
+    email: "TeeFaterOfGus@gmail.com",
+    isOnline: false,
+    skills: [{ name: "Node.js", level: "Advanced" }],
+  },
+  {
+    id: 3,
+    name: "AiAuanBoss",
+    email: "FanIBossDoneGUU@gmail.com",
+    isOnline: true,
+    skills: [
+      { name: "HTML" },
+      { name: "CSS", level: "Intermediate" },
+    ],
+  },
+];
 
 function App() {
-  const [count, setCount] = useState(0)
+  const handleViewDetails = (id: string | number) => {
+    alert(`Viewing details for user ID: ${id}`);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div style={{ padding: 32, background: "#f9fafb", minHeight: "100vh" }}>
+      <h1 style={{ textAlign: "center", marginBottom: 24 }}>User Profile Cards</h1>
+      <div
+        style={{
+          display: "flex",
+          gap: 16,
+          justifyContent: "center",
+          flexWrap: "wrap",
+        }}
+      >
+        {users.map((u) => (
+          <UserProfileCard key={u.id} user={u} onViewDetails={handleViewDetails} />
+        ))}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
