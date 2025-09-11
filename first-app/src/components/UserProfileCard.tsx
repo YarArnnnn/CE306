@@ -8,7 +8,7 @@ interface Props {
 }
 
 const card: React.CSSProperties = {
-  border: "1px solid #e5e7eb",
+  border: "1px solid #000000ff",
   borderRadius: 12,
   padding: 16,
   display: "flex",
@@ -22,7 +22,7 @@ const avatarStyle: React.CSSProperties = {
   height: 72,
   borderRadius: "50%",
   objectFit: "cover",
-  background: "#f3f4f6",
+  background: "#515b70ff",
 };
 
 const dot = (on: boolean): React.CSSProperties => ({
@@ -47,7 +47,7 @@ const UserProfileCard = ({ user, onViewDetails }: Props) => {
       />
       <div style={{ flex: 1 }}>
         <h3 style={{ margin: "0 0 4px" }}>{user.name}</h3>
-        <p style={{ margin: "0 0 8px", color: "#374151" }}>{user.email}</p>
+        <p style={{ margin: "0 0 8px", }}>{user.email}</p>
 
         <p style={{ margin: "0 0 12px" }}>
           <span style={dot(user.isOnline)} /> {user.isOnline ? "ออนไลน์" : "ออฟไลน์"}
@@ -64,7 +64,7 @@ const UserProfileCard = ({ user, onViewDetails }: Props) => {
           style={{
             padding: "8px 12px",
             borderRadius: 8,
-            border: "1px solid #111827",
+            border: "1px solid #81848bff",
             background: "white",
             cursor: "pointer",
           }}
@@ -77,3 +77,4 @@ const UserProfileCard = ({ user, onViewDetails }: Props) => {
 };
 
 export default UserProfileCard;
+    

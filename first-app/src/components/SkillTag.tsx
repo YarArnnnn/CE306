@@ -2,7 +2,7 @@ import React from "react";
 import type { Skill } from "./types";
 
 const pill: React.CSSProperties = {
-  border: "1px solid #ddd",
+  border: "1px solid #000000ff",
   borderRadius: 999,
   padding: "4px 10px",
   marginRight: 6,
