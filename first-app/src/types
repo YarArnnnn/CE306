@@ -1,0 +1,15 @@
+export type SkillLevel = "Beginner" | "Intermediate" | "Advanced";
+
+export interface Skill {
+  name: string;
+  level?: SkillLevel;
+}
+
+export interface UserData {
+  id: string | number;
+  name: string;
+  avatarUrl?: string;
+  email: string;
+  isOnline: boolean;
+  skills: Skill[];
+}
