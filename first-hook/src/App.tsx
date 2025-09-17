@@ -1,10 +1,7 @@
-import './App.css'
-import Counter from './CounterEx'
+import React from "react";
+import UserForm from "./UserForm";
 
 function App() {
-  return (
-    <Counter/>
-  )
+  return <UserForm />;
 }
-
-export default App
+export default App;
